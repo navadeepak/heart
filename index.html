@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+        *{
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fixdiv{
+            background-color: plum;
+            border: 2px solid pink;
+            position: absolute;
+            width: 30vw;
+            height: 5vh;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nonfixdiv{
+            background-color: aquamarine;
+            border: 2px solid aquamarine;
+            position: relative;
+            width: 30vw;
+            height: 5vh;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #hrt1{
+            position: absolute;
+            left: 40%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            animation: hrt1 2s infinite;
+        }#hrt2{
+            position: absolute;
+            left: 45%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            animation: hrt2 2s infinite;
+        }#hrt3{
+            position: absolute;
+            left: 50%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            animation: hrt3 2s infinite;
+        }#hrt4{
+            position: absolute;
+            left: 55%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            animation: hrt4 2s infinite;
+        }
+        #hrt5{
+            position: absolute;
+            left: 40%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            animation: hrt1 2s infinite;
+        }#hrt6{
+            position: absolute;
+            left: 45%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            animation: hrt2 2s infinite;
+        }#hrt7{
+            position: absolute;
+            left: 50%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            animation: hrt3 2s infinite;
+        }#hrt8{
+            position: absolute;
+            left: 55%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            animation: hrt4 2s infinite;
+        }
+        #cloud1{
+            display: none;
+            position: absolute;
+            top: 0;
+            right: -30vw;
+            animation: mov1 10s infinite;
+            animation-timing-function:linear ;
+        }
+        #cloud2{
+            display: none;
+            position: absolute;
+            top: 15vh;
+            left: -30vw;
+            animation: mov2 10s infinite;
+            animation-timing-function:linear ;
+        }
+        @keyframes mov1{
+            100%{transform: translateX(-130vw);}
+        }
+        @keyframes mov2{
+            100%{transform: translateX(130vw);}
+        }
+    </style>
+</head>
+<body id="body">
+    <img id="cloud1" src="icons8-heart-100.png" alt="mainhrt">
+    <img id="cloud2" src="icons8-heart-100.png" alt="mainhrt">
+    <img id="hrt1" src="icons8-heart-48.png" alt="h">
+    <img id="hrt2" src="icons8-broken-heart-48.png" alt="h">
+    <img id="hrt3" src="icons8-heart-48.png" alt="h">
+    <img id="hrt4" src="icons8-broken-heart-48.png" alt="h">
+    <img id="hrt5" src="icons8-heart-48.png" alt="h">
+    <img id="hrt6" src="icons8-broken-heart-48.png" alt="h">
+    <img id="hrt7" src="icons8-heart-48.png" alt="h">
+    <img id="hrt8" src="icons8-broken-heart-48.png" alt="h">
+    <div class="fixdiv">Miss You</div>
+    <div class="nonfixdiv" id="nonfixdiv" onclick="miss()">Open</div>
+    <script src="anime.min.js"></script>
+    <script>
+        function miss(){
+            document.getElementById("cloud1").style=("display:flex");
+            document.getElementById("cloud2").style=("display:flex");
+            anime({
+                targets:"#cloud1",
+                translateZ:"-30px",
+                direction:"normal",
+                loop:true,
+                duration:1000,
+            });
+            anime({
+                targets:".nonfixdiv",
+                translateY:"-500px",
+                duration:30000,
+                direction:"normal"
+            });
+            anime({
+                targets:"#hrt1",
+                loop:true,
+                translateY:"-420px",
+                duration:10000,
+                direction:"normal", 
+            });
+            anime({
+                targets:"#hrt2",
+                loop:true,
+                translateY:"-420px",
+                duration:8000,
+                delay:200,
+                direction:"normal", 
+            });
+            anime({
+                targets:"#hrt3",
+                loop:true,
+                translateY:"-420px",
+                duration:10000,
+                delay:800,
+                direction:"normal", 
+            });
+            anime({
+                targets:"#hrt4",
+                loop:true,
+                translateY:"-420px",
+                duration:10000,
+                delay:300,
+                direction:"normal", 
+            });
+            anime({
+                targets:"#hrt5",
+                loop:true,
+                translateY:"-420px",
+                duration:10000,
+                delay:200,
+                direction:"normal", 
+            });
+            anime({
+                targets:"#hrt6",
+                loop:true,
+                translateY:"-420px",
+                duration:8000,
+                delay:400,
+                direction:"normal", 
+            });
+            anime({
+                targets:"#hrt7",
+                loop:true,
+                translateY:"-420px",
+                duration:10000,
+                delay:1000,
+                direction:"normal", 
+            });
+            anime({
+                targets:"#hrt8",
+                loop:true,
+                translateY:"-420px",
+                duration:10000,
+                delay:300,
+                direction:"normal", 
+            });
+            document.getElementById("hrt1").style=("display:flex;");
+            document.getElementById("hrt2").style=("display:flex;");
+            document.getElementById("hrt3").style=("display:flex;");
+            document.getElementById("hrt4").style=("display:flex;");
+            document.getElementById("hrt5").style=("display:flex;");
+            document.getElementById("hrt6").style=("display:flex;");
+            document.getElementById("hrt7").style=("display:flex;");
+            document.getElementById("hrt8").style=("display:flex;");
+            document.getElementById("body").style=("background-color:#c0e8e0;transition:2.5s;")
+        }
+    </script>
+</body>
+</html>
